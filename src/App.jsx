@@ -8,18 +8,15 @@ const appRouter = createBrowserRouter([
     element: <AppLayout />,
     children: [
       {
-        index: true,
+        path: "/webpage",
         element: <LandingPage page={"web"} />,
       },
-    ],
-  },
-  {
-    path: "/mobilepage",
-    element: <AppLayout />,
-    children: [
       {
-        index: true, // Makes this the default route for /mobilepage
+        path: "/mobilepage",
         element: <LandingPage page={"mob"} />,
+      },
+      {
+        index: true,
       },
     ],
   },
