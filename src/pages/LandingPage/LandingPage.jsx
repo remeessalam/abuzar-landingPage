@@ -2,6 +2,7 @@ import Section from "../../Sections/Section";
 import SectionTwo from "../../Sections/SectionTwo";
 import SectionThree from "../../Sections/SectionThree";
 import { SectionFour } from "../../Sections/SectionFour";
+import PropTypes from "prop-types";
 
 const LandingPage = ({ page }) => {
   return (
@@ -13,6 +14,10 @@ const LandingPage = ({ page }) => {
       <SectionFour />
     </div>
   );
+};
+
+LandingPage.propTypes = {
+  page: PropTypes.string.isRequired,
 };
 
 export default LandingPage;

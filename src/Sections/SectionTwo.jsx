@@ -1,11 +1,13 @@
 import sectionTwoImageOne from "../assets/images/sectionTwoImageOne.png";
 import sectionTwoImageTwo from "../assets/images/sectionTwoImageTwo.jpg";
-import sectionTwoImageAR from "../assets/images/sectionTwoImageAR.jpg";
+// import sectionTwoImageAR from "../assets/images/sectionTwoImageAR.jpg";
 import roundedHeart from "../assets/svg/roundedHeart.svg";
 import chinese from "../assets/svg/chinese.svg";
-import setting from "../assets/svg/setting.svg";
+// import setting from "../assets/svg/setting.svg";
 import { Link } from "react-router-dom";
 import Button from "../Components/Button/Buttton";
+import PropTypes from "prop-types";
+
 const SectionTwo = ({ page }) => {
   return (
     <div className="md:w-[95%] lg:w-[80%] w-full mx-auto md:mt-[120px] mt-[60px]  h-full relative z-10">
@@ -20,8 +22,10 @@ const SectionTwo = ({ page }) => {
           />
         </div>
         <div className="flex flex-col gap-4 md:w-1/2 w-3/4  md:py-24 py-12 md:pl-24">
-          <h3 className="text-[#F5F5F5] w-24 text-[10px] rounded-full border px-[19px] py-[11px] shadow-8xl shadow-white">
-            {"About us".toUpperCase()}
+          <h3 className="text-[#F5F5F5] w-fit text-[10px] rounded-full border px-[19px] py-[11px] shadow-8xl shadow-white">
+            {page === "web"
+              ? "Web Development".toUpperCase()
+              : "App Development".toUpperCase()}
           </h3>
           <p className="text-xl font-medium text-white">
             {page === "web"
@@ -50,12 +54,14 @@ const SectionTwo = ({ page }) => {
 
       <div className="flex flex-col items-center lg:items-start lg:flex-row lg:mt-[120px] mt-[60px]">
         <div className="flex flex-col  items-center lg:items-start md:w-1/2 w-full">
-          <h3 className="text-[#F5F5F5] w-[117px] text-[10px] rounded-full border px-[18px] py-[10px] shadow-8xl shadow-white">
-            {"Our Services".toUpperCase()}
+          <h3 className="text-[#F5F5F5] w-fit text-[10px] rounded-full border px-[18px] py-[10px] shadow-8xl shadow-white">
+            {page === "web"
+              ? "Web Development Services".toUpperCase()
+              : "App Development Services".toUpperCase()}
           </h3>
           <p className="lg:text-[38px] font-medium text-center lg:text-start text-white mt-4">
             {page === "web"
-              ? "Unblock the potential of your business with AI"
+              ? "Enhancing Brands with Engaging Web Experiences"
               : "Unblock the potential of your business with AI"}
           </p>
         </div>
@@ -81,24 +87,48 @@ const SectionTwo = ({ page }) => {
           <div className="flex w-full items-center">
             <img src={page === "web" ? roundedHeart : roundedHeart} alt="" />
             <h4 className="sm:text-2xl text-lg font-medium tex ml-4">
-              {page === "web" ? "Game Development" : "Game Development"}
+              {page === "web" ? "E-commerence Websites" : "Game Development"}
             </h4>
           </div>
           <p className="text-sm font-normal md:w-[91%] w-full sm:pl-[58px] text-[#BABCC6]">
             {page === "web"
-              ? "       Embark on a journey of unforgettable gaming experiences with BlueBillionaire.ai, where our expert team of game developers brings           your visions to life. We specialize in crafting innovative games           that captivate and engage players across all platforms—from mobile           and console to PC."
+              ? "Empowering your online business with tailored ecommerce solutions. Our platforms boost customer engagement, streamline operations, and drive revenue growth."
               : "      Embark on a journey of unforgettable gaming experiences with BlueBillionaire.ai, where our expert team of game developers brings your visions to life. We specialize in crafting innovative games     that captivate and engage players across all platforms—from mobile and console to PC."}
           </p>
           <div className="flex items-center mt-4">
             <img src={page === "web" ? chinese : chinese} alt="" />
             <h4 className="sm:text-2xl text-lg font-medium ml-4">
-              {page === "web" ? "Blockchain Solutions" : "Blockchain Solutions"}
+              {page === "web"
+                ? "Social Media Websites"
+                : "Blockchain Solutions"}
             </h4>
           </div>
           <p className="text-sm font-normal  md:w-[91% w-full sm:pl-[58px] text-[#BABCC6]">
             {page === "web"
-              ? "       At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology. "
-              : "  At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology."}
+              ? "Get custom social media websites that captivate and engage your audience, driving growth and brand loyalty effortlessly"
+              : " At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology."}
+          </p>
+          <div className="flex items-center mt-4">
+            <img src={page === "web" ? chinese : chinese} alt="" />
+            <h4 className="sm:text-2xl text-lg font-medium ml-4">
+              {page === "web" ? "Landing Websites" : "Blockchain Solutions"}
+            </h4>
+          </div>
+          <p className="text-sm font-normal  md:w-[91% w-full sm:pl-[58px] text-[#BABCC6]">
+            {page === "web"
+              ? "Creating high-converting landing pages that capture attention and drive action. Tailored designs that showcase your brand’s message and maximize conversions."
+              : " At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology."}
+          </p>
+          <div className="flex items-center mt-4">
+            <img src={page === "web" ? chinese : chinese} alt="" />
+            <h4 className="sm:text-2xl text-lg font-medium ml-4">
+              {page === "web" ? "Custom Websites" : "Blockchain Solutions"}
+            </h4>
+          </div>
+          <p className="text-sm font-normal  md:w-[91% w-full sm:pl-[58px] text-[#BABCC6]">
+            {page === "web"
+              ? "Delivering tailor-made websites designed to meet your unique business needs. Our solutions blend creativity and functionality for an exceptional online experience."
+              : " At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology."}
           </p>
           <div
             className="absolute hidden lg:block top-[5px] -left-3 h-[160px] w-[1px]"
@@ -124,19 +154,19 @@ const SectionTwo = ({ page }) => {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row items-center text-white mt-[59px] gap-4">
+      {/* <div className="flex flex-col lg:flex-row items-center text-white mt-[59px] gap-4">
         <div className="relative flex flex-col items-center lg:items-start w-3/4 lg:w-1/2 mt-5 lg:h-[218px]">
           <div className="flex items-center">
             <img src={page ? setting : setting} alt="" />
             <h4 className="text-2xl font-medium ml-4">
               {page === "web"
-                ? "Augmented Reality & Virtual Reality (AR/VR)"
+                ? "Landing Websites"
                 : "Augmented Reality & Virtual Reality (AR/VR)"}
             </h4>
           </div>
           <p className="text-sm font-normal text-[#BABCC6] w-full max-w-[500px] mt-[17px] sm:pl-[58px]">
             {page === "web"
-              ? "with our cutting-edge AR/VR solutions. We create immersive           environments that allow users to interact with your products and           services in innovative and exciting ways. Whether it&rsquo;s           enhancing training programs, creating virtual tours, or developing           engaging marketing experiences, our AR/VR technology drives customer           engagement and significantly boosts sales. Let us help you bridge          the gap between the digital and physical worlds to create          unforgettable experiences."
+              ? "Creating high-converting landing pages that capture attention and drive action. Tailored designs that showcase your brand’s message and maximize conversions"
               : "with our cutting-edge AR/VR solutions. We create immersive           environments that allow users to interact with your products and           services in innovative and exciting ways. Whether it&rsquo;s           enhancing training programs, creating virtual tours, or developing           engaging marketing experiences, our AR/VR technology drives customer           engagement and significantly boosts sales. Let us help you bridge          the gap between the digital and physical worlds to create          unforgettable experiences."}
           </p>
           <div
@@ -161,9 +191,13 @@ const SectionTwo = ({ page }) => {
             className="rounded-2xl w-[552px]  object-contain"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
+};
+
+SectionTwo.propTypes = {
+  page: PropTypes.string.isRequired,
 };
 
 export default SectionTwo;

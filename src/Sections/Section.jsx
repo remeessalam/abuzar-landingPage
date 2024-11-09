@@ -8,6 +8,7 @@ import Button from "../Components/Button/Buttton";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const animation = { duration: 20000, easing: (t) => t };
 
@@ -114,6 +115,9 @@ const Section = ({ page }) => {
       </div>
     </div>
   );
+};
+Section.propTypes = {
+  page: PropTypes.string.isRequired,
 };
 
 export default Section;
