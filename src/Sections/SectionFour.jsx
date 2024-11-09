@@ -4,7 +4,7 @@ import Button from "../Components/Button/Buttton";
 export const SectionFour = () => {
   return (
     <div className="flex justify-center items-center mt-28">
-      <div className="flex flex-col gap-6 w-full md:w-1/2">
+      <div className="flex flex-col gap-6 w-full md:w-1/2 px-5 md:px-0">
         <div className="flex flex-col lg:flex-row gap-5">
           <div className="w-full lg:w-1/2">
             <h3>Full name</h3>

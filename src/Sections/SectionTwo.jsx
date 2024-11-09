@@ -1,8 +1,11 @@
 import sectionTwoImageOne from "../assets/images/sectionTwoImageOne.png";
-import sectionTwoImageTwo from "../assets/images/sectionTwoImageTwo.jpg";
+import sectionTwoImageTwo from "../assets/images/sectionTwoImageTwo.jpeg";
 // import sectionTwoImageAR from "../assets/images/sectionTwoImageAR.jpg";
-import roundedHeart from "../assets/svg/roundedHeart.svg";
+import roundedHeart from "../assets/svg/rounded-heart.svg";
 import chinese from "../assets/svg/chinese.svg";
+import socialmedia from "../assets/svg/socialmedia.svg";
+import landingpage from "../assets/svg/landing-page.svg";
+import customweb from "../assets/svg/customweb.svg";
 // import setting from "../assets/svg/setting.svg";
 import { Link } from "react-router-dom";
 import Button from "../Components/Button/Buttton";
@@ -85,7 +88,11 @@ const SectionTwo = ({ page }) => {
         </div>
         <div className="flex relative flex-col lg:pb-12 pb-0 justify-end lg:ml-[96px] h-[100%] mt-8 lg:mt-0 ml-0 gap-2 text-white md:w-1/2 w-3/4 lg:h-[535px]">
           <div className="flex w-full items-center">
-            <img src={page === "web" ? roundedHeart : roundedHeart} alt="" />
+            <img
+              src={page === "web" ? roundedHeart : roundedHeart}
+              alt=""
+              className="w-[45px] h-[45px]"
+            />
             <h4 className="sm:text-2xl text-lg font-medium tex ml-4">
               {page === "web" ? "E-commerence Websites" : "Game Development"}
             </h4>
@@ -96,7 +103,11 @@ const SectionTwo = ({ page }) => {
               : "      Embark on a journey of unforgettable gaming experiences with BlueBillionaire.ai, where our expert team of game developers brings your visions to life. We specialize in crafting innovative games     that captivate and engage players across all platforms—from mobile and console to PC."}
           </p>
           <div className="flex items-center mt-4">
-            <img src={page === "web" ? chinese : chinese} alt="" />
+            <img
+              src={page === "web" ? socialmedia : chinese}
+              alt=""
+              className="w-[45px] h-[45px]"
+            />
             <h4 className="sm:text-2xl text-lg font-medium ml-4">
               {page === "web"
                 ? "Social Media Websites"
@@ -109,7 +120,11 @@ const SectionTwo = ({ page }) => {
               : " At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology."}
           </p>
           <div className="flex items-center mt-4">
-            <img src={page === "web" ? chinese : chinese} alt="" />
+            <img
+              src={page === "web" ? landingpage : chinese}
+              alt=""
+              className="w-[45px] h-[45px]"
+            />
             <h4 className="sm:text-2xl text-lg font-medium ml-4">
               {page === "web" ? "Landing Websites" : "Blockchain Solutions"}
             </h4>
@@ -120,7 +135,11 @@ const SectionTwo = ({ page }) => {
               : " At BlueBillionaire.ai,we provide cutting-edge blockchain development services that revolutionize the decentralised operation, security,            and transparency of your company&rsquo;s operations. Our expertise            includes developing secure smart contracts, cutting-edge            decentralised apps, and bespoke cryptocurrency solutions—all            meticulously crafted to enable your company to take the fully            leverage the groundbreaking possibilities of blockchain technology."}
           </p>
           <div className="flex items-center mt-4">
-            <img src={page === "web" ? chinese : chinese} alt="" />
+            <img
+              src={page === "web" ? customweb : chinese}
+              alt=""
+              className="w-[45px] h-[45px]"
+            />
             <h4 className="sm:text-2xl text-lg font-medium ml-4">
               {page === "web" ? "Custom Websites" : "Blockchain Solutions"}
             </h4>
