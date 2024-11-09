@@ -34,7 +34,7 @@ const Section = ({ page }) => {
 
   return (
     <div
-      className="relative flex justify-center items-center bg-cover bg-center flex-col  w-screen mx-auto  min-h-full bg-[#080719] text-white overflow-hidden"
+      className="relative flex justify-center items-center bg-cover bg-center flex-col  w-screen mx-auto  min-h-full  text-white overflow-hidden"
       // bg-top bg-[length:100%_570px]
       style={{ backgroundImage: `url(${homeicon})` }}
     >
