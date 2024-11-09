@@ -4,15 +4,15 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 
 const appRouter = createBrowserRouter([
   {
-    path: "/webpage",
+    path: "/",
     element: <AppLayout />,
     children: [
       {
-        path: "/webpage",
+        path: "webpage",
         element: <LandingPage page={"web"} />,
       },
       {
-        path: "/mobilepage",
+        path: "mobilepage",
         element: <LandingPage page={"mob"} />,
       },
       {
